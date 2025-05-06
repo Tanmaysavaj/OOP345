@@ -1,16 +1,18 @@
 ## Hi there 👋
 
-<!--
-**Tanmaysavaj/Tanmaysavaj** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+his C++ project was developed as part of my Object-Oriented Programming course in Semester 3. It simulates a simplified online store management system, where users can view items, make purchases, and generate invoices.
 
-Here are some ideas to get you started:
+The program demonstrates core OOP principles such as class inheritance, encapsulation, constructors/destructors, file handling, and object management through a console-based user interface.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+🛠 Key Features:
+Display list of store items (with names, prices, quantities)
+
+Add customer purchase details
+
+Calculate total cost and generate a basic invoice
+
+Use of constructors/destructors for proper object lifecycle
+
+File I/O to store purchase details
+
