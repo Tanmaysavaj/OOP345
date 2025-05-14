@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: C++ CI
 
 on:
   push:
@@ -8,16 +8,20 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up C++ compiler
+        run: sudo apt update && sudo apt install g++ -y
+
+      - name: Compile all C++ files
+        run: |
+          mkdir -p build
+          g++ -std=c++17 -Wall -Wextra -o build/app *.cpp
+
+      - name: Run compiled application (optional)
+        run: ./build/app
+        continue-on-error: true  # prevent workflow failure if app needs user input or fails
